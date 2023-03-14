@@ -1,0 +1,61 @@
+<div class="block">
+  <div class="max-w-full h-3/6 flex">
+    <div class="my-10 text-center flex-auto w-2/3">
+        <h1 class="text-4xl font-bold mb-4 m-auto">Welcome to my website</h1>
+        <p class="text-lg mb-8 content-center w-2/3 m-auto  px-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button class="bg-yellow-500 mx-20  hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">Get started</button>
+    </div>
+    <div class="m-auto flex-auto">
+        <img src="assets/Untitled_design-removebg-preview.png" alt="Welcome image" class="rounded-lg">
+    </div>
+  </div>
+</div>
+<div class="block max-h-min w-full text-center bg-cyan-900 py-4">
+  <div class="w-1/3 my-4 self-center items-center align-middle inline-block text-white font-medium mx-auto"  *ngFor="let item of items">
+    <h2 class="font-semibold font-serif text-2xl">
+      {{item['value']}}
+    </h2>
+    <label>
+      {{item['label']}}
+    </label>
+  </div>
+</div>
+<div class="w-full py-14 bg-cyan-50">
+  <div class="text-center font-semibold text-black text-2xl font-sans">
+    Browse Teacher By Category
+  </div>
+  <div class="m-auto my-8 font-medium font-sans max-w-md align-middle justify-center text-center ">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, optio. Pariatur repellat animi consequatur? Porro fugiat magni ullam modi aliquid.
+  </div>
+  <div class="w-5/6 flex mx-auto overflow-x-auto">
+    <div class="mx-5 flex px-12" *ngFor="let item of  ic">
+      <mat-card class="w-28 mx-auto inline" >
+        <img [src]="item['src']" class="w-full h-5/6">
+        <label class="text-center" >{{item['label']}}</label>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<div class="w-full py-14 bg-yellow-50">
+  <div class="text-center font-semibold text-black text-2xl font-sans">
+    Lorem ipsum dolor sit amet consectetur adipisicing.
+    </div>
+    <div class="m-auto my-8 font-medium font-sans max-w-md align-middle justify-center text-center ">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eos magni in deleniti saepe nulla necessitatibus modi impedit!
+    </div>
+</div>
+<div class="w-full py-10 bg-white px-4">
+  <label class="font-semibold font-sans text-2xl">
+    Feadbacks
+  </label>
+  <div class="w-full justify-between my-3" *ngFor="let item of feedback; let i=index">
+    <div class="w-7/12 border-solid mr-auto  border-black border p-4 rounded-r-3xl rounded-tl-3xl my-12" *ngIf="(i+1)%2!=0">
+      “ {{item['feedback']}} ”
+      <div class="w-full text-right block ">~ {{item['username']}}</div>
+    </div>
+    <div class="w-7/12 border-solid ml-auto border-black border p-4 rounded-l-3xl rounded-tr-3xl my-12" *ngIf="(i+1)%2==0">
+      “ {{item['feedback']}} ”  
+      <div class="w-full text-right block ">~ {{item['username']}}</div>
+    </div>
+  </div>
+</div>
